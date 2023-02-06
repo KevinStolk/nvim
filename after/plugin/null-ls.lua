@@ -13,13 +13,14 @@ local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
 -- https://github.com/prettier-solidity/prettier-plugin-solidity
 null_ls.setup({
 	on_attach = function(client, bufnr)
-		if client.server_capabilities.documentFormattingProvider then
-			vim.api.nvim_clear_autocmds({ buffer = 0, group = augroup_format })
+		--[[ if client.server_capabilities.documentFormattingProvider then ]]
+		if client.supports_method("textDocument/formatting") then
+			vim.api.nvim_clear_autocmds({ buffer = bufnr, group = augroup_format })
 			vim.api.nvim_create_autocmd("BufWritePre", {
 				group = augroup_format,
-				buffer = 0,
+				buffer = bufnr,
 				callback = function()
-					vim.lsp.buf.formatting_seq_sync()
+					vim.lsp.buf.format({ bufnr = bufnr })
 				end,
 			})
 		end
@@ -27,8 +28,25 @@ null_ls.setup({
 	debug = false,
 	sources = {
 		formatting.prettier.with({
-			extra_filetypes = { "toml" },
-			extra_args = { "--single-quote", "--jsx-single-quote" },
+			extra_filetypes = {
+				"toml",
+				"javascript",
+				"javascriptreact",
+				"typescript",
+				"typescriptreact",
+				"vue",
+				"css",
+				"scss",
+				"less",
+				"html",
+				"json",
+				"jsonc",
+				"yaml",
+				"markdown",
+				"graphql",
+				"svelte",
+			},
+			extra_arg = { "--no-semi", "--single-quote", "--jsx-single-quote", "--tsx-single-quote" },
 		}),
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.stylua,
