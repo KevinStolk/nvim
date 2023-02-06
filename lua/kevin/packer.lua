@@ -36,6 +36,7 @@ return require("packer").startup(function(use)
 	use("nvim-treesitter/playground")
 	use("theprimeagen/harpoon") -- Godsend
 	use("theprimeagen/vim-be-good")
+	use("Exafunction/codeium.vim")
 	use("akinsho/bufferline.nvim")
 	use("vimwiki/vimwiki")
 	use("Djancyp/cheat-sheet")
