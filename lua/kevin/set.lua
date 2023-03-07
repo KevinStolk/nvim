@@ -38,6 +38,9 @@ set.colorcolumn = "80"
 vim.g.mapleader = " "
 vim.g.mapllocalleader = " "
 
+vim.g.vimwiki_list = { { path = "~/vimwiki", syntax = "markdown", ext = ".md" } }
+vim.g.vimwiki_global_ext = 0
+
 -- Use 'q' to quit from common plugins
 vim.api.nvim_create_autocmd({ "FileType" }, {
 	pattern = { "qf", "help", "man", "lspinfo", "spectre_panel", "lir" },
@@ -48,5 +51,3 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     ]])
 	end,
 })
-
-vim.g.vimwiki_list = { { path = "~/vimwiki", syntax = "markdown", ext = ".md" } } -- Vimwiki markdown syntax
