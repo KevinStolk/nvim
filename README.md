@@ -33,8 +33,8 @@
   - CMP Nvim Lua
   - LuaSnip (commonly used snippets)
   - Friendly Snippets
-- Treesitter (syntax highlighting)
-- Playground (View treestiter info in Neovim)
+- Treesitter (Syntax highlighting)
+- Playground (View treesitter info in Neovim)
 - Telescope (Fuzzy Finder for Neovim, but can be used for absolutely everything)
 - Telescope File Browser (File browser for Telescope)
 - Different Colorschemes
