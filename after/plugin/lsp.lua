@@ -5,9 +5,20 @@ lsp.preset("recommended")
 lsp.ensure_installed({
 	"tsserver",
 	"eslint",
-	--[[ "sumneko_lua", ]]
+	"lua_ls",
 	"rust_analyzer",
 	"tailwindcss",
+})
+
+-- Fix Undefined global 'vim'
+lsp.configure("lua_ls", {
+	settings = {
+		Lua = {
+			diagnostics = {
+				globals = { "vim" },
+			},
+		},
+	},
 })
 
 local cmp = require("cmp")
@@ -23,6 +34,13 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 -- this helps with copilot setup
 cmp_mappings["<Tab>"] = nil
 cmp_mappings["<S-Tab>"] = nil
+
+-- codeium keybindings
+vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, {expr = true})
+vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, {expr = true})
+vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, {expr = true})
+vim.keymap.set('i', '<c-cr>', function() return vim.fn['codeium#Accept']() end, {expr = true})
+
 
 lsp.setup_nvim_cmp({
 	mapping = cmp_mappings,

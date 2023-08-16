@@ -5,8 +5,23 @@ vim.g.mapllocalleader = " "
 
 keymap("n", "<leader>pv", vim.cmd.Ex)
 
+keymap("n", "<C-w>", ":write<CR>")
+
 keymap("v", "J", ":m '>+1<CR>gv=gv")
 keymap("v", "K", ":m '<-2<CR>gv=gv")
+
+keymap("n", "J", "mzJ`z")
+keymap("n", "<C-d>", "<C-d>zz")
+keymap("n", "<C-u>", "<C-u>zz")
+keymap("n", "n", "nzzzv")
+keymap("n", "N", "Nzzzv")
+
+-- Go to beginning and end of line
+keymap("n", "ge", "<End>")
+keymap("n", "gh", "<Home>")
+
+-- Gaming
+keymap("n", "<leader>vbg", ":VimBeGood<CR>")
 
 -- Increment/decrement
 keymap("n", "+", "<C-a>")
@@ -17,10 +32,6 @@ keymap("n", "x", '"_x')
 
 -- Select all
 keymap("n", "<C-a>", "gg<S-v>G<CR>zz")
-
--- New tab and close tab
-keymap("n", "te", ":tabedit")
-keymap("n", "tc", ":tabclose")
 
 -- Quit insert vim
 keymap("i", "<C-c>", "<Esc>")
@@ -81,9 +92,3 @@ keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>")
 -- Comment
 keymap("n", "<leader>/", "<Plug>(comment_toggle_linewise_current)")
 keymap("x", "<leader>/", "<Plug>(comment_toggle_linewise_visual)")
-
-keymap("n", "J", "mzJ`z")
-keymap("n", "<C-d>", "<C-d>zz")
-keymap("n", "<C-u>", "<C-u>zz")
-keymap("n", "n", "nzzzv")
-keymap("n", "N", "Nzzzv")

@@ -35,8 +35,7 @@ set.updatetime = 50
 
 set.colorcolumn = "80"
 
-vim.g.mapleader = " "
-vim.g.mapllocalleader = " "
+vim.g.blamer_enabled = 1
 
 vim.g.vimwiki_list = { { path = "~/vimwiki", syntax = "markdown", ext = ".md" } }
 vim.g.vimwiki_global_ext = 0
