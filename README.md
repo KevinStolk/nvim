@@ -59,6 +59,8 @@
 - Vim-Be-Good (minigame in vim made by ThePrimeagen)
 - Codeium (Code completion, similar to Copilot and Tabnine)
 - Bufferline
+- Markid (better syntax highlighting)
+- Blamer (gitlens but for neovim)
 - Vimwiki (Personal wiki in vim, uses markdown as default syntax)
 - Cheat-Sheet (cheat sheet to search up methods or concepts u might have forgotten about)
 - Markdown Preview (any explanation needed?)
