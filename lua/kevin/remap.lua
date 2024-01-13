@@ -86,6 +86,10 @@ keymap("n", "<leader>re", "<Plug>RestNvim")
 keymap("n", "<leader>rep", "<Plug>RestNvimPreview")
 keymap("n", "<leader>rel", "<Plug>RestNvimLast")
 
+-- Tabbing
+keymap("v", "<Tab>", ">gv")
+keymap("v", "<S-Tab>", "<gv")
+
 -- Git
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>")
 
