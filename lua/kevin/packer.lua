@@ -9,6 +9,7 @@ return require("packer").startup(function(use)
 		--[[ tag = "0.1.0", ]]
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
+
 	use({ "nvim-telescope/telescope-file-browser.nvim" })
 
 	-- Colorschemes
@@ -31,6 +32,7 @@ return require("packer").startup(function(use)
 	use("windwp/nvim-ts-autotag")
 	use("numToStr/Comment.nvim")
 	use("folke/zen-mode.nvim")
+	use("akinsho/toggleterm.nvim")
 	use("folke/todo-comments.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
 	--[[ use("norcalli/nvim-colorizer.lua") ]]
