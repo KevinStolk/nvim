@@ -25,6 +25,7 @@
   - LSPConfig
   - Mason
   - Mason LSPConfig
+  - Typescript-Tools
   - CMP
   - CMP Buffer
   - CMP Path
@@ -42,7 +43,9 @@
   - Gruvbox
   - Tokyo Night (TOKIOOOOOO)
   - Dark Plus
-  - Nightfly
+  - Pompeii
+  - Cyberdream
+- Themery (To manage colorschemes on the fly)
 - Gitsigns (Git integration in buffers)
 - TS-Rainbow (Rainbow pairs)
 - Autopairs (Auto pair plugin that closes multiple characters)
@@ -59,7 +62,6 @@
 - Vim-Be-Good (minigame in vim made by ThePrimeagen)
 - Codeium (Code completion, similar to Copilot and Tabnine)
 - Bufferline
-- Markid (better syntax highlighting)
 - Blamer (gitlens but for neovim)
 - Vimwiki (Personal wiki in vim, uses markdown as default syntax)
 - Cheat-Sheet (cheat sheet to search up methods or concepts u might have forgotten about)
@@ -67,7 +69,9 @@
 - Rest Client (built-in rest client to test web requests)
 - Undotree (Undo history checker)
 - Fugitive (Git for vim)
-- Null-LS (Formatter)
+- Conform (Formatter)
+- Peepsight (Glance at your code without distractions)
+- Sunglasses (Only see what u want to see)
 
 ## File Structure
 

@@ -284,6 +284,16 @@ _G.packer_plugins = {
     path = "/home/anzu/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  pompeii = {
+    loaded = true,
+    path = "/home/anzu/.local/share/nvim/site/pack/packer/start/pompeii",
+    url = "https://github.com/ivanhernandez/pompeii"
+  },
+  ["sunglasses.nvim"] = {
+    loaded = true,
+    path = "/home/anzu/.local/share/nvim/site/pack/packer/start/sunglasses.nvim",
+    url = "https://github.com/miversen33/sunglasses.nvim"
+  },
   ["tailwindcss-colorizer-cmp.nvim"] = {
     config = { "\27LJ\2\2c\0\0\2\0\4\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\1K\0\1\0\1\0\1\23color_square_width\3\2\nsetup\30tailwindcss-colorizer-cmp\frequire\0" },
     loaded = true,
