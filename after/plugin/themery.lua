@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 themery.setup({
-    themes = { "rose-pine", "gruvbox", "tokyonight", "darkplus", "catppuccin", "cyberdream", "pompeii" },
+    themes = { "rose-pine", "gruvbox", "tokyonight", "darkplus", "catppuccin", "cyberdream", "pompeii", "kanagawa-wave", "kanagawa-dragon", "kanagawa-lotus" },
     themeConfigFile = "~/.config/nvim/lua/kevin/theme.lua",
     livePreview = true,
 })
