@@ -105,6 +105,7 @@ nvim init.lua
 
 > This should install the plugins without any issues.
 
+```
 **3. You're done!**
 
 > You're now done installing the config, make sure to check the options.lua and keymaps.lua
