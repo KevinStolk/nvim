@@ -1,2 +1,2 @@
-require('kevin')
-
+require("kevin.core")
+require("kevin.lazy")

@@ -16,15 +16,16 @@
 
 ## Plugins:
 
-> This config is packed with plugins that are essential for development (in my honest opinion) with the goal in mind to have a blazingly fast, reliable and stable experience.
+> This config is packed with plugins that I find are essential for development with the goal in mind to have a blazingly fast, reliable and stable experience.
 
 ### Current Plugins:
 
-- Packer (plugin manager for vim)
-- Full LSP Setup (LSP Zero):
+- Lazy (plugin manager for vim)
+- Full LSP Setup:
   - LSPConfig
   - Mason
   - Mason LSPConfig
+  - Mason Tool Installer
   - Typescript-Tools
   - CMP
   - CMP Buffer
@@ -35,23 +36,16 @@
   - LuaSnip (commonly used snippets)
   - Friendly Snippets
 - Treesitter (Syntax highlighting)
-- Playground (View treesitter info in Neovim)
 - Telescope (Fuzzy Finder for Neovim, but can be used for absolutely everything)
 - Telescope File Browser (File browser for Telescope)
 - Different Colorschemes
   - Rose-Pine
   - Gruvbox
-  - Tokyo Night (TOKIOOOOOO)
-  - Dark Plus
-  - Pompeii
-  - Cyberdream
-- Themery (To manage colorschemes on the fly)
+  - Tokyo Night
 - Gitsigns (Git integration in buffers)
-- TS-Rainbow (Rainbow pairs)
 - Autopairs (Auto pair plugin that closes multiple characters)
-- TS-Context-Commentstring (Plugin for setting the commonstring option based on cursor location)
 - TS-Autotag (Auto close tag)
-- Comment (commenter, what did you expect?)
+- Comment (commenter)
 - Web-Devicons (Icons)
 - Zen-Mode (Zen mode)
 - Indent Blankline (Indenting guides for Neovim)
@@ -61,15 +55,18 @@
 - Harpoon (File marker made by ThePrimeagen, absolutely insane for productivity)
 - Vim-Be-Good (minigame in vim made by ThePrimeagen)
 - Codeium (Code completion, similar to Copilot and Tabnine)
-- Bufferline
-- Blamer (gitlens but for neovim)
+- Laravel (Laravel tooling to make life easier)
+- Blamer (Gitlens but for neovim)
+- Notify (Notifications)
+- Which-Key (Temporary plugin to get used to keybinds faster)
 - Vimwiki (Personal wiki in vim, uses markdown as default syntax)
 - Cheat-Sheet (cheat sheet to search up methods or concepts u might have forgotten about)
-- Markdown Preview (any explanation needed?)
-- Rest Client (built-in rest client to test web requests)
 - Undotree (Undo history checker)
-- Fugitive (Git for vim)
+- Lazygit (Git client integrated with Toggleterm)
 - Conform (Formatter)
+- Nvim-Lint (Linting)
+- Maximizer (Maximizes split window)
+- Oil (File explorer to edit filesystem like an Nvim buffer)
 - Peepsight (Glance at your code without distractions)
 - Sunglasses (Only see what u want to see)
 
@@ -77,17 +74,15 @@
 
 <pre>
 ~/.config/nvim
-├── after
-│   ├── plugin
-│   │   └── (plugin.lua)
 ├── lua
 │   ├── (user folder)
+│   │       ├─ core
 │   │       ├── init.lua
-│   │       ├── packer.lua
-│   │       ├── remap.lua
-│   │       └── set.lua
-├── plugin
-│   └── packer_compiled.lua
+│   │       ├── options.lua
+│   │       ├── keymaps.lua
+│   │       ├─ plugins
+│   │       ├── (lsp folder)
+│   │       └── (plugin.lua)
 └── init.lua
 </pre>
 
@@ -97,33 +92,20 @@
 
 ```bash
 - Neovim 0.5.0+ required
-- Install packer from this git repo:
-https://github.com/wbthomason/packer.nvim
 ```
 
-**2. Clone the repo into your .config folder and install the plugins:**
+**2. Clone the repo into your .config folder and Lazy should install all the plugins:**
 
 ```bash
 git clone https://github.com/KevinStolk/nvim
 
 cd nvim
 
-cd lua/(your user folder)
-
-nvim packer.lua
-```
-
-> Inside packer.lua type the following commands:
-
-```bash
-:so
-
-:PackerSync
-```
+nvim init.lua
 
 > This should install the plugins without any issues.
 
 **3. You're done!**
 
-> You're now done installing the config, make sure to check the set.lua and remap.lua
+> You're now done installing the config, make sure to check the options.lua and keymaps.lua
 > to get familiar with the keybinds and such.
